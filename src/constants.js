@@ -28,7 +28,7 @@ export const experiences = [
             'Enhanced product performance through significant contributions to backend development, optimizing essential components for improved efficiency 📈.',
             'Implemented data security for the company’s product to provide role-based access control ⚙️.'
         ],
-        'url': 'https://inncircles.com/#home',
+        'url': 'https://kanini.com/',
     },
     {
         'company': 'KANINI',
@@ -39,7 +39,7 @@ export const experiences = [
             'Gained experience with Git version control contributing to the development and maintenance of code repositories.',
             'Worked on the application dashboard, making it more user-friendly and improving its overall functionality📱.'
         ],
-        'url': 'https://www.att.com/',
+        'url': 'https://kanini.com/',
     },
 ]
 

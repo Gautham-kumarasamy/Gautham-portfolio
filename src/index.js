@@ -10,10 +10,13 @@ import Experience from './components/Experience';
 import About from './components/About';
 import Contact from './components/Contact';
 import Projects from './components/Projects';
+import { Provider } from 'react-redux';
+import store from './store/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
+  <Provider store={store}>
+    <BrowserRouter>
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
@@ -23,6 +26,7 @@ root.render(
         <Route path='/contact' element={<Contact/>}/>
       </Routes>
     </BrowserRouter>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
