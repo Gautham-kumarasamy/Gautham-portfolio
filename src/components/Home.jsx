@@ -39,7 +39,7 @@ const Home = () => {
 					<h1 className='text-6xl sm:text-7xl font-extrabold mt-2'>Hi, I'm&nbsp;<span className='text-yellow-200 font-extrabold'>{text}</span></h1>
 					<p className='mt-3 text-xl'>I love to learn and build scalable and optimized web applications.</p>
 				</div>      
-			</div>
+			</div>	
 			<Footer/>
 		</div>	
 	);

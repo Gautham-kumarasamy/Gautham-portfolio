@@ -15,7 +15,7 @@ const Navbar = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0);  
   }, [pathname]);
 
   return (
@@ -32,7 +32,8 @@ const Navbar = () => {
         <div className="hidden sm:flex space-x-4 items-center text-sm">
           <Link to='/projects'>Projects</Link>
           <Link to='/experience'>Experience</Link>
-          <Link to='/contact'>Contact</Link>
+          <Link to='/additional-info'>Additional Info</Link>
+          <Link to='/contact'>Contact</Link>  
         </div>
 
         <div className="sm:hidden">
@@ -45,11 +46,12 @@ const Navbar = () => {
             ✕
           </button>
           <ul className="font-medium text-2xl space-y-4">
-            <li><Link to='/' onClick={closeMobileMenu}>Home</Link></li>
-            <li><Link to='/about' onClick={closeMobileMenu}>About</Link></li>
-            <li><Link to='/projects' onClick={closeMobileMenu}>Projects</Link></li>
-            <li><Link to='/experience' onClick={closeMobileMenu}>Experince</Link></li>
-            <li><Link to='/contact' onClick={closeMobileMenu}>Contact</Link></li>
+              <li><Link to='/' onClick={closeMobileMenu}>Home</Link></li>
+              <li><Link to='/about' onClick={closeMobileMenu}>About</Link></li>
+              <li><Link to='/projects' onClick={closeMobileMenu}>Projects</Link></li>
+              <li><Link to='/experience' onClick={closeMobileMenu}>Experince</Link></li>
+              <li><Link to='/additional-info' onClick={closeMobileMenu}>Additional Info</Link></li>
+              <li><Link to='/contact' onClick={closeMobileMenu}>Contact</Link></li>
           </ul>
         </div>
       </div>

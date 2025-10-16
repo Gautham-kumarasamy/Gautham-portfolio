@@ -93,7 +93,7 @@ const Contact = () => {
 						<label className='flex flex-col'>
 							<span className=' font-medium mb-4'>Your Name</span>
 							<input
-								type='text'
+					 			type='text'
 								name='name'
 								value={form.name}
 								onChange={handleChange}
@@ -132,7 +132,7 @@ const Contact = () => {
 							className='pt-3 px-8 rounded-xl outline-none w-fit font-bold shadow-md bg-gray-900'
 						>
 							{loading ? "Sending..." : "Send"}
-						</button>
+						</button> 
 					</form>
 				</div>
 				<ToastContainer />

@@ -10,6 +10,7 @@ import Experience from './components/Experience';
 import About from './components/About';
 import Contact from './components/Contact';
 import Projects from './components/Projects';
+import AdditionalInfoTable from './components/AdditionalInfoTable.jsx';
 import { Provider } from 'react-redux';
 import store from './store/store';
 
@@ -24,6 +25,7 @@ root.render(
         <Route path='/projects' element={<Projects/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/contact' element={<Contact/>}/>
+        <Route path='/additional-info' element={<AdditionalInfoTable/>}/>
       </Routes>
     </BrowserRouter>
   </Provider>

@@ -102,8 +102,7 @@ When generating code, always follow these principles:
 
 ### 3. No Hardcoded Values
 - Extract all URLs, strings, numbers to constants or environment variables
-- Use configuration objects for repeated values
-- Store API endpoints in environment variables
+kk- Store API endpoints in environment variables
 - Create constants files for static data
 
 ### 4. Proper Variable Naming
@@ -219,3 +218,31 @@ export default userService;
 - **Use .jsx extension for components and .js for utilities**
 - **Use PropTypes instead of TypeScript interfaces**
 - **No type annotations or TypeScript syntax**
+
+## Layered Architecture (Current Project Structure)
+
+Your project is organized using a strict layered architecture:
+
+- **Data Layer:**
+  - All API calls and data fetching are handled in `src/data/` (e.g., `projectRepository.js`).
+  - Uses Axios and a single API base URL (`API_BASE_URL`).
+
+- **Domain (Service) Layer:**
+  - Business logic, data transformation, and use-cases are handled in `src/domain/` (e.g., `projectService.js`).
+  - Keeps components and slices free of business logic.
+
+- **Presentation Layer:**
+  - UI components are organized in `src/components/`.
+  - Components only handle rendering and receive data via props/hooks.
+
+### Example Data Flow
+1. Component (e.g., `Projects.jsx`) requests data via Redux.
+2. Redux slice calls the repository in the data layer.
+3. Repository fetches data from the API.
+4. Service layer transforms or maps the data.
+5. Component renders the processed data.
+
+### Benefits
+- Improved modularity and maintainability.
+- Easier to test and extend business logic.
+- Clean separation between data access, business rules, and UI.
